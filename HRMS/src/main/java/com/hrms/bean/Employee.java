@@ -1,5 +1,6 @@
 package com.hrms.bean;
 
+
 public class Employee {
     private Integer empId;
     private String empName;
