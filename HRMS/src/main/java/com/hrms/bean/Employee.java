@@ -1,16 +1,13 @@
 package com.hrms.bean;
 
-/**
- * Created by 张鑫 on 2018/11/6.
- */
 public class Employee {
     private Integer empId;
     private String empName;
     private String empEmail;
     private String gender;
     private Integer departmentId;
-    private Department department;
 
+    private Department department;
 
     public Integer getEmpId() {
         return empId;
@@ -52,6 +49,28 @@ public class Employee {
         this.departmentId = departmentId;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", empEmail='" + empEmail + '\'' +
+                ", gender='" + gender + '\'' +
+                ", departmentId=" + departmentId + '\'' +
+                ", department=" + department +
+                '}';
+    }
+
+    public Employee() {
+    }
+    public Employee(Integer empId, String empName, String empEmail, String gender, Integer departmentId) {
+        this.empId = empId;
+        this.empName = empName;
+        this.empEmail = empEmail;
+        this.gender = gender;
+        this.departmentId = departmentId;
+    }
+
     public Department getDepartment() {
         return department;
     }
@@ -59,5 +78,4 @@ public class Employee {
     public void setDepartment(Department department) {
         this.department = department;
     }
-
 }
